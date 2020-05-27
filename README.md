@@ -1,32 +1,103 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+> Mini e-commerce application built with Rails and Stripe
 
-## Setup
+Jungle is a full-stack Rails app made to mimic a real e-commerce app. With complete CRUD operations implemented, users can register, login, logout, add items to their cart, and use Stripe to make simulated purchases. Admins can view a dashboard with information about customers and products, as well as add and remove items, categories, and sales to and from the database.
+
+## Table of contents
+
+- [Usage](#usage)
+- [Getting started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installing and running](#installing-and-running)
+- [Running the Tests](#running-the-tests)
+- [Built with](#built-with)
+- [Contributing](#contributing)
+- [Meta](#meta)
+- [Known issues / bugs](#known-issues-/-bugs)
+- [Feature roadmap](#feature-roadmap)
+  - [In the works](#in-the-works)
+  - [Planned](#planned)
+- [Acknowledgements](#acknowledgements)
+
+## Usage
+
+![Jungle](https://github.com/DPintoLL/jungle-e-commerce/blob/master/docs/jungle-screenshot.png?raw=true)
+
+## Getting started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+You need Ruby and Rails installed, specifically Ruby 2.3.5x and Rails 4.2.x.
+
+### Installing and Running
 
 1. Run `bundle install` to install dependencies
 2. Create `config/database.yml` by copying `config/database.example.yml`
 3. Create `config/secrets.yml` by copying `config/secrets.example.yml`
-4. Run `bin/rake db:reset` to create, load and seed db
-5. Create .env file based on .env.example
+4. Create `.env` by copying example and providing an elephantsql database URL
+5. Run `bin/rake db:reset` to create, load and seed db
 6. Sign up for a Stripe account
 7. Put Stripe (test) keys into appropriate .env vars
 8. Run `bin/rails s -b 0.0.0.0` to start the server
 
-## Stripe Testing
+**NOTE: You may need to add `ruby` infront of binstub commands**
 
-Use Credit Card # 4111 1111 1111 1111, any CVC and future date for testing success scenarios.
+## Running the Tests
+
+Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
-## Dependencies
+To run the tests:
 
-- Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
-- PostgreSQL 9.x
-- Stripe
+```sh
+bin/rspec
+```
 
-# Testing & Navigating the App
+## Built with
 
-Once the server is running, navigate to it on localhost:3000 and explore the different areas and features.
+- [Rails 4.2.x]() - Front-end framework
+- [Stripe]() - Payment API
+- [PostgreSQL 9.x]() - open source SQL database
+- [Bootstrap]() - css framework
+- [Capybara]() - end-to-end testing framework
 
-You should be able to successfully check out (via Stripe) using a test credit card.
+## Contributing
+
+1. Fork it (<https://github.com/DPintoLL/jungle-e-commerce/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`) or issue branch (`git checkout -b issue/brokenThing`)
+3. Commit your changes (`git commit -m 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new PR
+
+## Meta
+
+Diogo Pinto – [diogopinto.dev](https://github.com/DPintoLL/) – diogosmp@gmail.com
+
+## Known issues / bugs
+
+- Bugs? What bugs?
+
+_To add an issue, start a new one [here.](https://github.com/DPintoLL/jungle-e-commerce/issues)_
+
+## Feature roadmap
+
+### In the works
+
+- Deploy
+- Have sales properly affect prices, accounting for multiple simultaneous sales
+
+### Planned
+
+- More tests
+- Auto fill forms based on logged in user data
+- Restyle
+
+_If you'd like to add a feature yourself, please see the [Contributing](#contributing) guidelines._
+
+## Acknowledgements
+
+- This was done as a project for Lighthouse Labs
