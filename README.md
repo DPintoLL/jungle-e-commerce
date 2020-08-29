@@ -22,7 +22,7 @@ Jungle is a full-stack Rails app made to mimic a real e-commerce app. With compl
 
 ## Usage
 
-![Jungle]()
+![Jungle](https://github.com/DPintoLL/jungle-e-commerce/docs/jungle-screenshot.png)
 
 ## Getting started
 
